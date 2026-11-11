@@ -1,32 +1,30 @@
-# React + TypeScript + Vite
+# Task 1 — рендер, реконсиляция и эффекты
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Задача показывает разницу между **рендером компонента** и **изменением DOM**, а также
+проверяет, что подписка в `useEffect` корректно создаётся и снимается.
 
-Currently, two official plugins are available:
+## Что внутри
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `App` — счётчик и три кнопки.
+- `Child` — получает `title` из `courses.json` и выводит его в `<h2>`.
+  В `useEffect` вешает `MutationObserver` на свой DOM-узел и логирует каждое реальное
+  изменение DOM, а также считает число активных подписок.
 
-## React Compiler
+## Что проверяем (смотри консоль)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Действие | Что увидим | Вывод |
+| --- | --- | --- |
+| **Увеличить на 1** | `[render] Child`, но **нет** `[DOM]` | Родитель перерендерился → ребёнок тоже, но реконсиляция не нашла отличий, DOM не трогается |
+| **Сменить title** | `[render] Child` и `[DOM] characterData` с новым текстом | React точечно меняет только текстовый узел, `<h2>` и `<p>` не пересоздаются |
+| **Размонтировать / Монтировать** | `[effect] подписка создана / снята` | Cleanup отрабатывает, счётчик активных подписок не растёт — утечек нет |
 
-## Expanding the Oxlint configuration
+> В dev-режиме `StrictMode` специально вызывает рендер и эффект дважды
+> (mount → unmount → mount), поэтому при монтировании видно «создана → снята → создана».
+> Итог всё равно `активных: 1`.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Запуск
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
