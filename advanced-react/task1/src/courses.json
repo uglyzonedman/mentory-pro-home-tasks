@@ -1,0 +1,6 @@
+[
+  {"id":"react","title":"React-интерфейсы","category":"frontend","seats":12,"version":1},
+  {"id":"typescript","title":"Типизация данных","category":"frontend","seats":0,"version":1},
+  {"id":"next","title":"Серверный rendering","category":"fullstack","seats":8,"version":1},
+  {"id":"testing","title":"Проверка поведения UI","category":"quality","seats":5,"version":1}
+]
