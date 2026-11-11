@@ -11,6 +11,7 @@
 | Задача | Суть |
 | --- | --- |
 | [advanced-react/task1](advanced-react/task1) | Рендер vs изменение DOM, реконсиляция, cleanup подписки в `useEffect` |
+| [advanced-react/task2](advanced-react/task2) | Ререндеры списка карточек, запись выбора в `localStorage` |
 
 ## Деплой
 
