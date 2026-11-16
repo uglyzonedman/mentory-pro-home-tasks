@@ -13,6 +13,7 @@
 | [advanced-react/task1](advanced-react/task1) | Рендер vs изменение DOM, реконсиляция, cleanup подписки в `useEffect` |
 | [advanced-react/task2](advanced-react/task2) | Ререндеры списка карточек, запись выбора в `localStorage` |
 | [advanced-react/task5](advanced-react/task5) | Композиция через слоты: `Panel` с `title`, `children` и `actions`, фильтр курсов по категории |
+| [advanced-react/task6](advanced-react/task6) | Управляемый (`useState`) и неуправляемый (`useRef`) фильтр курсов с подписанными полями |
 
 ## Деплой
 
