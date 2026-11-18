@@ -16,6 +16,7 @@
 | [advanced-react/task6](advanced-react/task6) | Управляемый (`useState`) и неуправляемый (`useRef`) фильтр курсов с подписанными полями |
 | [advanced-react/task7](advanced-react/task7) | Container / View: `CourseCatalogContainer` со стейтом и фильтром, презентационный `CourseListView` |
 | [advanced-react/task8](advanced-react/task8) | Подъём состояния: `App` хранит поиск, категорию и выбор, `FilterPanel` и `CourseListView` получают всё через пропсы |
+| [advanced-react/task9](advanced-react/task9) | `useMemo`: сортировка 2000 курсов с замером времени, сравнение списка с мемоизацией и без |
 
 ## Деплой
 
