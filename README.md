@@ -19,6 +19,7 @@
 | [advanced-react/task9](advanced-react/task9) | `useMemo`: сортировка 2000 курсов с замером времени, сравнение списка с мемоизацией и без |
 | [advanced-react/task10](advanced-react/task10) | `React.memo` + `useCallback` / `useMemo`: стабильные `onSelect` и `options`, лог изменившихся пропсов `CoursePicker` |
 | [advanced-react/task11](advanced-react/task11) | Кастомный hook `useFavorites`: `CourseList` и `FavoritesPanel` делят избранное через `App`, два отдельных вызова hook независимы |
+| [advanced-react/task12](advanced-react/task12) | Производные данные: `App` хранит только `query`, `selectedId` и избранное, а отфильтрованный список, выбранный курс и счётчики вычисляет на лету |
 
 ## Деплой
 
