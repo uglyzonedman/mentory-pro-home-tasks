@@ -22,6 +22,7 @@
 | [advanced-react/task12](advanced-react/task12) | Производные данные: `App` хранит только `query`, `selectedId` и избранное, а отфильтрованный список, выбранный курс и счётчики вычисляет на лету |
 | [base-typescript/task1](base-typescript/task1) | Типизация пропсов: `Course`, `CourseCardProps`, проверка ошибки типа через `@ts-expect-error` |
 | [base-typescript/task2](base-typescript/task2) | Типизированная форма: `FormValues`, `FormErrors`, валидация с результатом `ValidResult \| InvalidResult` |
+| [base-typescript/task3](base-typescript/task3) | Типизированный хук `useSelection`: `UseSelectionResult`, независимые представления — кнопки и выпадающий список |
 
 ## Деплой
 
