@@ -23,6 +23,7 @@
 | [base-typescript/task1](base-typescript/task1) | Типизация пропсов: `Course`, `CourseCardProps`, проверка ошибки типа через `@ts-expect-error` |
 | [base-typescript/task2](base-typescript/task2) | Типизированная форма: `FormValues`, `FormErrors`, валидация с результатом `ValidResult \| InvalidResult` |
 | [base-typescript/task3](base-typescript/task3) | Типизированный хук `useSelection`: `UseSelectionResult`, независимые представления — кнопки и выпадающий список |
+| [base-typescript/task4](base-typescript/task4) | Дженерик `groupBy<T>`: группировка курсов и заявок с сохранением типа, проверки через `@ts-expect-error` |
 
 ## Деплой
 
